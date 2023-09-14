@@ -3,7 +3,7 @@ import  { useState } from 'react'
 export default function useCalculadora() {
   
     const [numero1, setNumero1] = useState<string>("0");
-    const [numero2, setNumero2] = useState<string>("");
+    const [numero2, setNumero2] = useState<string>("0");
     const [operador, setOperador] = useState<string>("");
   
     const limpiar=()=>{

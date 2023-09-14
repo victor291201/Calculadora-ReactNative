@@ -7,7 +7,7 @@ import useCalculadora from '../hooks/useCalculadora';
 export default function CalculadoraScreen() {
   const {width,height} = Dimensions.get("window");
   const med = width>height? height:width;
-  const {numero1,numero2,limpiar,insertarNumero,eliminarUltimo,operar,igual} = useCalculadora()
+  const {numero1,numero2,limpiar,ans,insertarNumero,eliminarUltimo,operar,igual} = useCalculadora()
   return (
     <View style={[{flex:1},styles.jCEnd,styles.aIEnd]}>
         <StatusBar
@@ -26,7 +26,7 @@ export default function CalculadoraScreen() {
         </View>
         <View style={[styles.fWWarp,styles.fDRow,styles.jCCenter]}>
           <Button1 press={limpiar} text="C" type="2"/>
-          <Button1 press={limpiar} text="+/-" type="2"/>
+          <Button1 press={ans} text="Ans" type="2"/>
           <Button1 press={eliminarUltimo} text="del" type="2"/>
           <Button1 press={()=>operar("/")} text="/" type="3"/>
 
